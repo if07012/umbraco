@@ -1,0 +1,16 @@
+{
+  "id": "81bf94f2-5e73-479a-91c5-47ecfc70363b",
+  "name": "Send email to cpr@voxteneo.asia",
+  "form": "d40dcd62-9245-4e5d-b581-bbf9024795ba",
+  "active": true,
+  "workflowTypeId": "e96badd7-05be-4978-b8d9-b3d733de70a5",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "cpr@voxteneo.asia",
+    "SenderEmail": "",
+    "Subject": "The Form '{form_name}' was submitted",
+    "Message": "The Form '{form_name} was submitted, this is the list of values it contained. You can turn this email off under workflows in Umbraco Forms.",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

@@ -1,0 +1,25 @@
+{
+    //you can define multiple editors
+    propertyEditors: [
+        {
+            /*this must be a unique alias*/
+            alias: "Umbraco.DynamicCrud",
+            /*the name*/
+            name: "Dynamic Crud",
+            /*the icon*/
+            icon: "icon-code",
+            /*grouping for "Select editor" dialog*/
+            group: "Common",
+            /*the HTML file we will load for the editor*/
+            editor: {
+                view: "~/umbraco/lib/dynamiccrud/dynamiccrud.html"
+            }
+        }
+    ]
+    ,
+    //array of files we want to inject into the application on app_start
+    javascript: [		
+		"http://jtable.org/Scripts/jtable/jquery.jtable.js",
+        '~/umbraco/lib/dynamiccrud/dynamiccrud.controller.js'
+    ]
+}

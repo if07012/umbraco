@@ -1,0 +1,49 @@
+<div ng-show="!showForm" id="grid"></div>
+<div id="forms" ng-show="showForm">
+    <div ng-repeat="form in forms">
+        <div class="umb-el-wrap">
+            <label class="control-label" ng-attr-title="{{form.title}}">{{form.title}}</label>
+            <div class="controls">
+                <div class="umb-property-editor">
+                    <div>
+                        <input type="text" ng-show="form.type==='String'" ng-model="form.value" class="umb-editor umb-textstring " ng-required="form.required" />
+                        <input type="number" pattern="[0-9]*" ng-show="form.type==='Int32'" ng-model="form.value" class="umb-editor umb-number " ng-required="form.required" />
+                        <input type="number" pattern="[0-9]*" ng-show="form.type==='Double'" ng-model="form.value" class="umb-editor umb-number " ng-required="form.required" />
+                        <div ng-show="form.type==='DateTime'">
+                            <div datetime format="form.format" class="input-append date datepicker" value="form.value" style="position: relative;" id="datepickerbaru">
+                                <input name="datepicker" data-date-format="YYYY-MM-DD" id="baru" type="text" ng-model="form.value" ng-required="form.required" class="datepickerinput">
+                                <span class="add-on">
+                                    <i class="icon-calendar"></i>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div type="button" ng-click="saveData()" ng-show="state===''" class="btn umb-button__button btn-success">
+            <span class="umb-button__content">
+                Save
+            </span>
+        </div>
+        <div type="button" ng-click="saveData()" ng-show="state==='Delete'"  class="btn umb-button__button btn-danger">
+            <span class="umb-button__content">
+                Delete
+            </span>
+        </div>
+        <div type="button" ng-click="saveData()" ng-show="state==='Update'" class="btn umb-button__button btn-info">
+            <span class="umb-button__content">
+                Update
+            </span>
+        </div>
+        <div type="button" ng-click="back()"  class="btn umb-button__button">
+            <span class="umb-button__content">
+                Back
+            </span>
+        </div>
+    </div>
+</div>

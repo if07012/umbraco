@@ -1,0 +1,27 @@
+{
+    //you can define multiple editors
+    propertyEditors: [
+        {
+            /*this must be a unique alias*/
+            alias: "Umbraco.ChooseFriend",
+            /*the name*/
+            name: "Add Profile",
+            /*the icon*/
+            icon: "icon-code",
+            /*grouping for "Select editor" dialog*/
+            group: "Common",
+            /*the HTML file we will load for the editor*/
+            editor: {
+                view: "~/umbraco/lib/choosefriend/choosefriend.html"
+            }
+        }
+    ]
+    ,
+    //array of files we want to inject into the application on app_start
+    javascript: [
+		"https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.min.js",
+		"https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js",
+		"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js",
+        '~/umbraco/lib/choosefriend/choosefriend.controller.js'
+    ]
+}

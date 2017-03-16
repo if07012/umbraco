@@ -1,0 +1,9 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" type="text/css">
+
+<div ng-controller="Umbraco.ChooseFriend">
+    <select select2 style="width: 100%" multiple="multiple" item="model.value">
+        <option value="AL">Alabama</option>
+        <option value="WY">Wyoming</option>
+    </select>
+    <input type="input" ng-model="model.value" style="display: none"  />
+</div>
